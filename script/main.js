@@ -59,6 +59,6 @@ function sincroStorage(){
     localStorage.setItem("listaComentarios",JSON.stringify(listaComentarios));
 }
 
-
-
-
+fetch("https://api.spotify.com")
+.then((res) => console.log(res))
+.catch((err) => console.log(err));
