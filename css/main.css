@@ -1,0 +1,1169 @@
+@charset "UTF-8";
+/*se importan los partials*/
+/*footer*/
+/*globales*/
+/*nav*/
+/*Index*/
+/*Reseteo los valores seteados del navegador. Si no pongo esto, se me crea un margen por default que crea un marco blanco en la pagina*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Carena-Regular;
+  font-weight: bold;
+  src: url(../fonts/Carena-Regular.otf) format("opentype");
+}
+/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
+en siguiente bloque de codigo*/
+#actual {
+  background-color: #5c3434;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@keyframes tiltingCard {
+  0% {
+    transform: translateX(0%) scale(1.01);
+  }
+  25% {
+    transform: translateX(5px) scale(1.01);
+  }
+  75% {
+    transform: translateX(-5px) scale(1.01);
+  }
+}
+.wppimage {
+  /*hf: altura foto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  display: inline-block;
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  left: 50vw;
+  transform: translateX(calc(-45px / 2 + 45px * -1));
+}
+.wppimage img {
+  height: 100%;
+  width: 100%;
+}
+
+.igimage {
+  /*hf: altura foto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  display: inline-block;
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  left: 50vw;
+  transform: translateX(calc(-45px / 2 + 45px * 1));
+}
+.igimage img {
+  height: 100%;
+  width: 100%;
+}
+
+/*Este loop es para automatizar el estilo de las areas de artistas recomendados en Contact*/
+.socialMedia .recommendedTopRight {
+  border-top: dotted;
+  grid-area: recommendedTopRight;
+  margin-top: 0px;
+  padding: 0px 20px 20px 0px;
+  border-left: dotted;
+}
+.socialMedia .recommendedTopRight p {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.socialMedia .recommendedTopRight h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.socialMedia .recommendedTopRight #animenzVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  width: auto;
+}
+.socialMedia .recommendedTopRight #animenzVideo iframe {
+  justify-self: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+.socialMedia .recommendedTopRight h3 {
+  margin-top: 30px;
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.socialMedia .recommendedTopRight .carousel {
+  height: 50%;
+  margin: 10%;
+  margin-bottom: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+}
+.socialMedia .recommendedTopRight .carousel button {
+  height: 35%;
+}
+.socialMedia .recommendedTopRight .carousel .carousel-control-next {
+  right: -12%;
+}
+.socialMedia .recommendedTopRight .carousel .carousel-control-prev {
+  left: -12%;
+}
+.socialMedia .recommendedTopRight .carousel .carousel-inner .carousel-item {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.socialMedia .recommendedTopRight .carousel .carousel-inner .carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.socialMedia .recommendedBottom1 {
+  border-top: dotted;
+  grid-area: recommendedBottom1;
+  margin-top: 0px;
+  padding: 0px 20px 20px 0px;
+  border-left: dotted;
+}
+.socialMedia .recommendedBottom1 p {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.socialMedia .recommendedBottom1 h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.socialMedia .recommendedBottom1 #playerPianoVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  width: auto;
+}
+.socialMedia .recommendedBottom1 #playerPianoVideo iframe {
+  justify-self: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+.socialMedia .recommendedBottom1 h3 {
+  margin-top: 30px;
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.socialMedia .recommendedBottom1 .carousel {
+  height: 50%;
+  margin: 10%;
+  margin-bottom: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+}
+.socialMedia .recommendedBottom1 .carousel button {
+  height: 35%;
+}
+.socialMedia .recommendedBottom1 .carousel .carousel-control-next {
+  right: -12%;
+}
+.socialMedia .recommendedBottom1 .carousel .carousel-control-prev {
+  left: -12%;
+}
+.socialMedia .recommendedBottom1 .carousel .carousel-inner .carousel-item {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.socialMedia .recommendedBottom1 .carousel .carousel-inner .carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.socialMedia .recommendedBottom2 {
+  border-top: dotted;
+  grid-area: recommendedBottom2;
+  margin-top: 0px;
+  padding: 0px 20px 20px 0px;
+  border-left: dotted;
+}
+.socialMedia .recommendedBottom2 p {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.socialMedia .recommendedBottom2 h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.socialMedia .recommendedBottom2 #danielThrasherVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  width: auto;
+}
+.socialMedia .recommendedBottom2 #danielThrasherVideo iframe {
+  justify-self: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+.socialMedia .recommendedBottom2 h3 {
+  margin-top: 30px;
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.socialMedia .recommendedBottom2 .carousel {
+  height: 50%;
+  margin: 10%;
+  margin-bottom: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+}
+.socialMedia .recommendedBottom2 .carousel button {
+  height: 35%;
+}
+.socialMedia .recommendedBottom2 .carousel .carousel-control-next {
+  right: -12%;
+}
+.socialMedia .recommendedBottom2 .carousel .carousel-control-prev {
+  left: -12%;
+}
+.socialMedia .recommendedBottom2 .carousel .carousel-inner .carousel-item {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.socialMedia .recommendedBottom2 .carousel .carousel-inner .carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.socialMedia .recommendedBottom3 {
+  border-top: dotted;
+  grid-area: recommendedBottom3;
+  margin-top: 0px;
+  padding: 0px 20px 20px 0px;
+  border-left: dotted;
+}
+.socialMedia .recommendedBottom3 p {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.socialMedia .recommendedBottom3 h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.socialMedia .recommendedBottom3 #mrPianoMinionVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  width: auto;
+}
+.socialMedia .recommendedBottom3 #mrPianoMinionVideo iframe {
+  justify-self: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+.socialMedia .recommendedBottom3 h3 {
+  margin-top: 30px;
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.socialMedia .recommendedBottom3 .carousel {
+  height: 50%;
+  margin: 10%;
+  margin-bottom: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+}
+.socialMedia .recommendedBottom3 .carousel button {
+  height: 35%;
+}
+.socialMedia .recommendedBottom3 .carousel .carousel-control-next {
+  right: -12%;
+}
+.socialMedia .recommendedBottom3 .carousel .carousel-control-prev {
+  left: -12%;
+}
+.socialMedia .recommendedBottom3 .carousel .carousel-inner .carousel-item {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.socialMedia .recommendedBottom3 .carousel .carousel-inner .carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.socialMedia .recommendedBottom4 {
+  border-top: dotted;
+  grid-area: recommendedBottom4;
+  margin-top: 0px;
+  padding: 0px 20px 20px 0px;
+  border-left: dotted;
+}
+.socialMedia .recommendedBottom4 p {
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.socialMedia .recommendedBottom4 h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.socialMedia .recommendedBottom4 #jaimeAltozanoVideo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  width: auto;
+}
+.socialMedia .recommendedBottom4 #jaimeAltozanoVideo iframe {
+  justify-self: center;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+.socialMedia .recommendedBottom4 h3 {
+  margin-top: 30px;
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.socialMedia .recommendedBottom4 .carousel {
+  height: 50%;
+  margin: 10%;
+  margin-bottom: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+}
+.socialMedia .recommendedBottom4 .carousel button {
+  height: 35%;
+}
+.socialMedia .recommendedBottom4 .carousel .carousel-control-next {
+  right: -12%;
+}
+.socialMedia .recommendedBottom4 .carousel .carousel-control-prev {
+  left: -12%;
+}
+.socialMedia .recommendedBottom4 .carousel .carousel-inner .carousel-item {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.socialMedia .recommendedBottom4 .carousel .carousel-inner .carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#navbarBurger {
+  /*Para que el nav quede pegado al tope de la página cuando se 
+  scrollea hacia abajo*/
+  position: sticky;
+  top: 0;
+  /*El z-index es para que al scrollear el nav quede siempre por 
+  encima de todo*/
+  z-index: 999;
+  /*Poner 100vw fue la única forma que encontré para que el body deje 
+  de quedar más chico que la página en distintas páginas*/
+}
+#navbarBurger ul {
+  width: 100vw;
+  border: solid;
+  border-color: black;
+  z-index: 999;
+}
+#navbarBurger ul li a {
+  /*Formato de botones para que sea clickeable todo el boton del navegador y no solo 
+  el texto del ancla, tambien se agrega animacion de hover*/
+}
+#navbarBurger ul li a .navbutton {
+  background-color: inherit; /*Para que el texto tenga el mismo color de fondo cuando sea el actual*/
+  border: none;
+  /*El borde ya esta dado por el parent list item*/
+  font-family: Carena-Regular;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  /*transition: 2s;*/
+  /*Comento esta linea de CSS porque me interesaba agregarle una animacion al boton luego de hacerle click, pero no se por que la animacion sucedia solo
+  cuando hacia click en Uploads y Requests. Cuando se hacia click en Introduction, Contact y Speedruns no surgia animacion asi que lo comento para que no se aplique pero no
+  termine de entender por que con algunos si y otros no animaba*/
+  display: inline-block;
+  width: 95%;
+  /*Le pogno esto para que el boton ocupe todo el espacio del ancla, de esta forma la propiedad del hover (cambio de opacidad en la letra) se dispara cuando el mousse
+  pase por encima de cualquier parte del boton, y no solo por encima del texto. Lo dejo en 95% porque con 100% supera al nav*/
+  cursor: pointer;
+  /*Con esta linea, el mousse cambia a una manito cuando pasa por encima del boton para indicar que se puede hacer click ahi*/
+}
+#navbarBurger ul li a .navbutton:hover {
+  /*Con esta parte agrega la opacidad que quiero cuando pase el mouse por el boton*/
+  opacity: 1;
+}
+
+/* Modifico dimensiones del navbar del tipo hamburguesa de como 
+viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
+funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
+.navbar {
+  padding: 0;
+  border: solid;
+  border-color: black;
+  /*Color del navbar*/
+}
+.navbar div .navbar-toggler {
+  /*Le doy borde al boton*/
+  border: solid;
+  border-color: black;
+}
+.navbar #navbar {
+  background-color: #300c0c;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  /*Uso display:flex para ubiar los botones y que ocupen todo el vw*/
+}
+nav .navDesktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0%;
+  border: 0;
+  margin-bottom: 0;
+}
+nav .navDesktop li {
+  display: flex;
+  align-items: center;
+  text-justify: center;
+  /*Formato de los botones para el nav*/
+  border-style: none;
+  font-family: Carena-Regular;
+  background-color: #300c0c;
+  /*La idea del 20% es para que con el total de los 5 elementos del navegador se me 
+  ocupe la totalidad del ancho de la pagina*/
+  width: 100%;
+  /*Quiero que el texto en los botones este con justificacion en el centro*/
+  text-align: center;
+}
+nav .navDesktop li a {
+  padding-left: 50px; /*eSTE PADDING ES PARA CENTRAR LOS BOTONES*/
+  padding-right: 50px;
+}
+nav .navDesktop li a button {
+  /*Modifico boton*/
+  margin: 7px;
+}
+
+.collapse {
+  position: sticky; /*Para que se quede debajo del bar luego de desplegarse*/
+  top: 70px;
+  width: 100vw;
+  z-index: -1; /*Para que no me tape el boton al desplegar*/
+}
+.collapse .p-4 {
+  /*Solo poniendo !important me hace efecto este cambio*/
+  padding: 5px !important;
+}
+.collapse div a .navbutton {
+  background-color: #300c0c;
+  border: none;
+  font-family: Carena-Regular;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  display: inline-block;
+  width: 95%;
+  cursor: pointer;
+}
+.collapse div a .navbutton:hover {
+  opacity: 1;
+}
+
+/*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
+.collapsing {
+  position: sticky; /*Para que se quede debajo del bar luego de desplegarse*/
+  top: 70px;
+  width: 100vw;
+  z-index: -1; /*Para que no me tape el boton al desplegar*/
+}
+.collapsing .p-4 {
+  /*Solo poniendo !important me hace efecto este cambio*/
+  padding: 5px !important;
+}
+.collapsing div a .navbutton {
+  background-color: #300c0c;
+  border: none;
+  font-family: Carena-Regular;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  display: inline-block;
+  width: 95%;
+  cursor: pointer;
+}
+.collapsing div a .navbutton:hover {
+  opacity: 1;
+}
+
+/*Código importado desde el GitHub de Ian Lunn para agregar animaciones en botones*/
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #7c3e25;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/*Termina código importado*/
+/*Comienza lo que contiene body*/
+body {
+  background-image: linear-gradient(#b48a99, rgba(92, 69, 69, 0.8784313725));
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+  /*Es necesario agregar este estilo para que el gradiente se me extienda por toda la página*/
+  background-attachment: fixed;
+}
+body h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0;
+}
+body h1 p {
+  font-family: Carena-Regular;
+  position: relative;
+  top: 10px;
+  padding: 20px;
+}
+
+.divimage {
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  margin-top: 20px;
+  /*Posicionamiento de la imagen en Introduction, la intencion que tengo 
+  es de ponerlo al costado y a su derecha el texto introductorio al sitio web*/
+}
+.divimage #introimage {
+  /*border-radius: 40px;
+  top: 200px;
+  box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75); */
+}
+.divimage #introimage:hover {
+  animation-duration: 0.25s;
+  animation-name: tiltingCard;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.divimage #intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+  top: 200px;
+  text-align: justify;
+  font-weight: 500;
+}
+.divimage #intro .welcomeCard {
+  color: white;
+  display: inline-block;
+  text-align: right;
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  padding: 25px;
+  background-color: rgba(100, 20, 17, 0.555);
+  height: 150px;
+  width: 300px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+.divimage #intro .welcomeCard:hover {
+  animation-duration: 0.25s;
+  animation-name: tiltingCard;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.divimage #intro .welcomeCard .welcome {
+  color: white;
+  font-size: 50px; /*Tamanio de texto*/
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.divimage #intro .welcomeCard .toMy {
+  color: white;
+  font-size: 15px; /*Tamanio de texto*/
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.divimage .divAboutMe {
+  margin-bottom: 80px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  padding: 25px;
+  background-color: rgba(100, 20, 17, 0.555);
+  height: auto;
+  width: auto;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+.divimage .divAboutMe:hover {
+  animation-duration: 0.25s;
+  animation-name: tiltingCard;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.divimage .divAboutMe .aboutMe {
+  color: white;
+  font-size: 50px; /*Tamanio de texto*/
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  justify-self: center;
+}
+.divimage .divAboutMe p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
+.socialMedia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-areas: "socialMedia comentarios" "form comentarios" "recommendedBottom1 recommendedTopRight" "recommendedBottom3 recommendedBottom4";
+  margin-left: 20px;
+  margin-top: 20px;
+  grid-gap: 0;
+}
+.socialMedia div {
+  grid-area: socialMedia;
+  /*Para ordenar los items "Instagram, YouTube, etc..."*/
+}
+.socialMedia div p {
+  margin-bottom: 50px;
+}
+.socialMedia div #socialMediaList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.socialMedia div #socialMediaList li {
+  border: solid;
+  border-width: thin;
+  border-color: black;
+  padding: 5px 15px 10px 15px;
+  background-color: rgba(100, 20, 17, 0.555);
+  cursor: pointer;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+.socialMedia div #socialMediaList li:hover {
+  animation-duration: 0.25s;
+  animation-name: tiltingCard;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.socialMedia div #socialMediaList li a {
+  text-decoration: none;
+  color: white;
+}
+.socialMedia div #socialMediaList li a img {
+  height: 40px;
+  margin-right: 10px;
+}
+.socialMedia .sectionForm {
+  grid-area: form;
+  height: 800px;
+}
+.socialMedia .sectionForm form {
+  /*Espaciado entre zonas de texto en formulario de Contacts*/
+}
+.socialMedia .sectionForm form div {
+  padding-top: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+.socialMedia .sectionForm form div h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.socialMedia .sectionForm form div input {
+  border: solid;
+  border-radius: 8px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+.socialMedia .sectionForm form div textarea {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: solid;
+  border-radius: 8px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+.socialMedia .sectionForm form #botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.socialMedia .sectionForm form #botones input {
+  border: double;
+  padding: 0px 10px 0px 10px;
+  border-radius: 3px;
+  border-width: thick;
+}
+.socialMedia .comentarios {
+  grid-area: comentarios;
+}
+.socialMedia .comentarios h2 {
+  position: absolute;
+  margin-top: 20px;
+  font-style: italic;
+}
+.socialMedia .comentarios ul {
+  padding-top: 80px;
+}
+.socialMedia .comentarios ul li {
+  margin-bottom: 10px;
+}
+.socialMedia .comentarios ul li a {
+  color: rgb(71, 29, 29);
+  font-weight: 750;
+  margin-left: 20px;
+}
+.socialMedia .comentarios p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -70%;
+  font-weight: bold;
+}
+.socialMedia .recommendedTopRight {
+  margin-top: 0px;
+}
+.socialMedia .recommendedTopRight p {
+  margin-top: 10px;
+  text-align: justify;
+}
+.socialMedia .recommendedTopRight h3 {
+  top: 2%; /*Para que se ubique un poco mejor*/
+}
+.socialMedia .recommendedBottom1 {
+  border-left: none;
+}
+.socialMedia .recommendedBottom3 {
+  border-left: none;
+}
+
+/*Se configuran todas las posiciones de videos en el partial loops*/
+/*Espaciado entre navegador y primer texto en Requests*/
+.requests {
+  margin-left: 20px;
+  margin-top: 20px;
+  /*Espaciado entre texto y lista de solicitudes en Requests*/
+}
+.requests section p {
+  margin-bottom: 25px;
+}
+.requests section .iframediv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+}
+.requests section .iframediv iframe {
+  width: 90%;
+  margin-left: -20px;
+}
+.requests section p {
+  margin-top: 20px;
+}
+
+.speedruns {
+  /*Espaciado entre navegador y primer texto en Speedruns*/
+  margin-left: 20px;
+}
+.speedruns section {
+  /*Espaciado entre parrafo y videos de Speedruns*/
+}
+.speedruns section p {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.speedruns section #nouploads {
+  margin-bottom: -50%;
+}
+.speedruns section .videoPlaceHolder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: -20px;
+  background-color: grey;
+  position: relative;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  left: 27%;
+  width: 40%;
+  height: 40%;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+}
+.speedruns section .videoPlaceHolder p {
+  padding-top: 28.125%;
+  color: white;
+  margin-top: 0px;
+  padding-bottom: 28.125%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*Espaciado entre navegador y primer texto de Uploads*/
+.uploads {
+  margin-left: 20px;
+  /*Espaciado entre video subido en Uploads y todo lo demas*/
+}
+.uploads p {
+  margin-top: 20px;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: black;
+}
+.uploads .iframeuploads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uploads .iframeuploads h2 {
+  margin: 20px;
+  font-size: x-large;
+  text-decoration: underline;
+}
+.uploads .iframeuploads label img {
+  /*Tenia la intencion de usar la funcion visibility pero por alguna razon no funciona con la imagen
+  pero con opacity si puedo esconder la imagen*/
+  opacity: 1;
+  transition: 0.2s;
+  /*Codigo importado usando una pagina de box generator*/
+  box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  /*Fin de codigo importado*/
+  cursor: pointer;
+  z-index: 0;
+}
+.uploads .iframeuploads label img:hover {
+  transform: skew(5deg, 1deg) scale(1.008);
+  /*Codigo importado usando una pagina de box generator*/
+  box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0);
+  /*Fin de codigo importado*/
+}
+.uploads .iframeuploads .labelultimocapitulo {
+  height: 315px;
+  width: 560px;
+}
+.uploads .iframeuploads .labelultimocapitulo img {
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.uploads .iframeuploads iframe {
+  visibility: hidden;
+}
+.uploads .iframeuploads #ultimocapitulo {
+  display: none;
+}
+.uploads .iframeuploads #ultimocapitulo:checked ~ iframe {
+  visibility: visible;
+  position: absolute;
+  /*Ubicación para que se ponga justo donde antes estaba la imagen*/
+  top: 273px;
+}
+.uploads .iframeuploads #ultimocapitulo:checked ~ .labelultimocapitulo {
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  body main .divimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .divimage #introimage {
+    height: 50%;
+    width: 50%;
+    border-radius: 7%;
+  }
+  body footer {
+    height: 135px;
+  }
+  body footer .wpptext {
+    /*hf: altura texto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+    color: rgb(151, 79, 69);
+    display: inline;
+    position: absolute;
+    top: 35px;
+    left: 50vw;
+    transform: translateX(calc(-100px / 2 + 100px * -2.295));
+    left: 360px;
+    width: 50vw;
+    font-weight: bold;
+  }
+  body footer .wppimage {
+    left: 90px;
+    top: 20px;
+  }
+  body footer .igimage {
+    left: 0;
+    /*Le doy el espacio de una imagen, mas el padding mas el espacio entre imagenes*/
+    top: 80px;
+  }
+  body footer .igtext {
+    width: 50vw;
+    left: 0;
+    top: 90px;
+  }
+  body .socialMedia {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, repeat(5, 2fr);
+    grid-template-areas: "socialMedia" "form" "recommendedTopRight" "recommendedBottom1" "recommendedBottom2" "recommendedBottom3" "recommendedBottom4";
+  }
+  body .socialMedia .sectionForm {
+    margin-bottom: -50px;
+  }
+  body .socialMedia .sectionForm form input {
+    padding-bottom: 0px;
+  }
+  body .socialMedia .recommendedTopRight {
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    border-left: none;
+  }
+  body .socialMedia .recommendedTopRight p {
+    margin-top: -85px;
+    margin-bottom: 150px;
+  }
+  body .socialMedia .recommendedBottom1 {
+    border-left: none;
+  }
+  body .socialMedia .recommendedBottom2 {
+    border-left: none;
+  }
+  body .socialMedia .recommendedBottom3 {
+    border-left: none;
+  }
+  body .socialMedia .recommendedBottom4 {
+    border-left: none;
+  }
+  body .socialMedia .comentarios p {
+    display: none;
+  }
+  body #navbarBurger {
+    position: sticky;
+    top: 0px;
+  }
+  body #navbarBurger .navDesktop {
+    display: none;
+  }
+  body #navbarBurger label {
+    width: 100vw;
+    z-index: 999;
+  }
+  body .uploads .iframeuploads iframe {
+    width: 72vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .divimage #introimage {
+    height: 35%;
+    width: 35%;
+  }
+  .socialMedia {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, repeat(5, 2fr);
+    grid-template-areas: "socialMedia" "form" "recommendedTopRight" "recommendedBottom1" "recommendedBottom2" "recommendedBottom3" "recommendedBottom4";
+  }
+  .socialMedia .sectionForm {
+    margin-bottom: -50px;
+  }
+  .socialMedia .sectionForm form input {
+    padding-bottom: 0px;
+  }
+  .socialMedia .recommendedTopRight {
+    margin-top: 0;
+    border-left: none;
+  }
+  .socialMedia .recommendedTopRight p {
+    margin-top: -250px;
+    margin-bottom: 150px;
+  }
+  .socialMedia .recommendedBottom1 {
+    border-left: none;
+  }
+  .socialMedia .recommendedBottom2 {
+    border-left: none;
+  }
+  .socialMedia .recommendedBottom3 {
+    border-left: none;
+  }
+  .socialMedia .recommendedBottom4 {
+    border-left: none;
+  }
+  .navbar {
+    position: sticky;
+    top: 0px;
+  }
+  .navbar .navDesktop {
+    display: none;
+  }
+  .show {
+    position: sticky;
+  }
+}
+@media screen and (min-width: 992px) {
+  .divimage #introimage {
+    height: 369px;
+    width: 333px;
+  }
+  .collapse {
+    display: none;
+  }
+  #navbar {
+    display: none;
+  }
+}
+footer {
+  /*display: flex;
+  flex-direction: row;
+  text-align: center;*/
+  position: fixed;
+  background-color: rgb(71, 29, 29);
+  z-index: 20;
+  /*height: $tamaniofooter;*/
+  bottom: 0;
+  width: 100vw;
+  padding: 20px 0 20px 0;
+  height: 85px;
+  z-index: 9;
+  /*Hice el mixin footerin para que centre dentro del footer*/
+  /*Hice el mixin footerintexto para que centre dentro del footer*/
+}
+footer .wpptext {
+  /*hf: altura texto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  color: rgb(151, 79, 69);
+  display: inline;
+  position: absolute;
+  top: 35px;
+  left: 50vw;
+  transform: translateX(calc(-100px / 2 + 100px * -1.7));
+  font-weight: bold;
+}
+footer .igtext {
+  /*hf: altura texto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  color: rgb(151, 79, 69);
+  display: inline;
+  position: absolute;
+  top: 35px;
+  left: 50vw;
+  transform: translateX(calc(-100px / 2 + 100px * 1.275));
+}
+footer .igtext a {
+  position: absolute;
+  top: -5px;
+  color: rgb(151, 79, 69);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

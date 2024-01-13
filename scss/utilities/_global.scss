@@ -1,0 +1,23 @@
+//Hoja para el reset
+
+/*Reseteo los valores seteados del navegador. Si no pongo esto, se me crea un margen por default que crea un marco blanco en la pagina*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Carena-Regular;
+    font-weight: bold;
+    src: url(../fonts/Carena-Regular.otf) format("opentype");
+    }
+
+/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
+en siguiente bloque de codigo*/
+#actual{
+    background-color: $colorActual;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

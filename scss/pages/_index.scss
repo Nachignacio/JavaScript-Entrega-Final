@@ -1,0 +1,94 @@
+.divimage {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    margin-top: 20px;
+    /*Posicionamiento de la imagen en Introduction, la intencion que tengo 
+es de ponerlo al costado y a su derecha el texto introductorio al sitio web*/
+    #introimage {
+        &:hover{
+            animation-duration: 0.25s;
+            animation-name: tiltingCard;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        /*border-radius: 40px;
+        top: 200px;
+        box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75); */
+    }
+    #intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px;
+        top: 200px;
+        text-align: justify;
+        font-weight: 500;
+        .welcomeCard{
+            &:hover{
+                animation-duration: 0.25s;
+                animation-name: tiltingCard;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+            }
+            color: $colorDentroDeCarta;
+            display: inline-block;
+            text-align: right;
+            border: solid;
+            border-width: thin;
+            border-color: black;
+            padding: 25px;
+            background-color: $colorCard;
+            height: $altoCard;
+            width: $anchoCard;
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+            .welcome{
+                color: $colorDentroDeCarta;
+                font-size: $tamanioWelcome; /*Tamanio de texto*/
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .toMy{
+                color: $colorDentroDeCarta;
+                font-size: $tamanioToMy; /*Tamanio de texto*/
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+    }
+    .divAboutMe{
+        margin-bottom: 80px;
+        &:hover{
+            animation-duration: 0.25s;
+            animation-name: tiltingCard;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        color: $colorDentroDeCarta;
+        display: inline-block;
+        text-align: center;
+        border: solid;
+        border-width: thin;
+        border-color: black;
+        padding: 25px;
+        background-color: $colorCard;
+        height: auto;
+        width: auto;
+        box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+        .aboutMe{
+            color: $colorDentroDeCarta;
+            font-size: $tamanioAboutMe; /*Tamanio de texto*/
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            justify-self: center;
+        }
+        p{
+            text-align: center;
+            font-size: $tamanioAboutMeTexto;
+            font-weight: 300;
+        }
+    }
+}

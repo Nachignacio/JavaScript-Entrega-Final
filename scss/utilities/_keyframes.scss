@@ -1,0 +1,12 @@
+@keyframes tiltingCard{
+    0%{
+        transform: translateX(0%) scale(1.01);
+    }
+    25%{
+        transform: translateX(5px) scale(1.01);
+    }
+    75%{
+        transform: translateX(-5px) scale(1.01);
+    }
+    
+}

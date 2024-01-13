@@ -1,0 +1,144 @@
+/*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
+.socialMedia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-areas:
+    "socialMedia comentarios"
+    "form comentarios"
+    "recommendedBottom1 recommendedTopRight"
+    "recommendedBottom3 recommendedBottom4";
+    margin-left: 20px;
+    margin-top: 20px;
+    grid-gap: 0;
+    div{
+        grid-area: socialMedia;
+        /*Para ordenar los items "Instagram, YouTube, etc..."*/
+        p{
+            margin-bottom: 50px;
+        }
+        #socialMediaList {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            list-style: none;
+            li{
+                border: solid;
+                border-width: thin;
+                border-color: black;
+                padding: 5px 15px 10px 15px;
+                background-color: $colorCard;
+                cursor: pointer;
+                &:hover{
+                    animation-duration: 0.25s;
+                    animation-name: tiltingCard;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+                box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                a{
+                    img{
+                        height: 40px;
+                        margin-right: 10px;
+                    }
+                    text-decoration: none;
+                    color: $colorDentroDeCarta;
+                }
+            }
+        }
+    }
+    .sectionForm{
+        grid-area: form;
+        height: 800px;
+        form {
+            /*Espaciado entre zonas de texto en formulario de Contacts*/
+            div {
+                padding-top: 20px;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: justify;
+                h4{
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                input{
+                    border: solid;
+                    border-radius: 8px;
+                    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                    text-align: center;
+                }
+                textarea{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    border: solid;
+                    border-radius: 8px;
+                    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+                    -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+                }
+            }
+            #botones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            input{
+                border: double;
+                padding: 0px 10px 0px 10px;
+                border-radius: 3px;
+                border-width: thick;
+                }
+            }
+        }
+    }
+    .comentarios{
+        grid-area: comentarios;
+        h2{
+            position: absolute;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        ul{
+            padding-top: 80px;
+            li{
+                margin-bottom: 10px;
+                a{
+                    color: $colorFooter;
+                    font-weight: 750;
+                    margin-left: 20px;
+                }
+            }
+        }
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: -70%;
+            font-weight:bold;
+        }
+    }
+    .recommendedTopRight{
+        margin-top: 0px;
+        p{
+            margin-top: 10px;
+            text-align: justify;
+        }
+        h3{
+            top: 2%; /*Para que se ubique un poco mejor*/
+        }
+    }
+    .recommendedBottom1{
+        border-left: none;
+    }
+    .recommendedBottom3{
+        border-left: none;
+    }
+}
+
+
+/*Se configuran todas las posiciones de videos en el partial loops*/

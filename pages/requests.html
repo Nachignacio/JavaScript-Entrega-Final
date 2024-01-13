@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piano Bounty es un portal para solicitar versiones de las canciones que te gustan en piano con arreglos de música clásica.">
+    <meta name="keywords" content="piano, bounty, música, musica, clásica, clasica, cover, version, versión, comisión, comision, comisionado, Ignacio, ignacio, Manfredini, manfredini">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Piano Bounty | Requests</title>
+    <link rel="icon" type="image/x-icon" href="../images/pianofavicon.png">
+</head>
+<body>
+    <header> <!--Esto va a contener el logo de la pagina y el navegador-->
+        <h1> <!-- Creo el logo de la pagina -->
+            <p>Piano Bounty</p>
+        </h1>
+    </header>
+    <nav class="navbar navbar-dark bg-danger-subtle" id="navbarBurger"> <!--Empiezo a configurar el navegador de la pagina-->
+        <div class="container-fluid" id="navbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarToggleExternalContent" 
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-danger-subtle p-4">
+                <a href="./requests.html">
+                    <button class="navbutton" id="actual">
+    <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        REQUESTS
+                    </button>
+                </a>
+                <a href="./uploads.html">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+                <a href="../index.html">
+                    <button class="navbutton">
+                        INTRODUCTION
+                    </button>
+                </a>
+                <a href="./speedruns.html">
+                    <button class="navbutton">
+                        SPEEDRUNS
+                    </button>
+                </a>
+                <a href="./contact.html">
+                    <button class="navbutton">
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </div>
+        </div>
+        <ul class="navDesktop">
+            <li>
+                <a href="./requests.html" class="hvr-underline-from-center" id="actual">
+                    <button class="navbutton"> <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        REQUESTS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./uploads.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        INTRODUCTION
+                    </button>                        
+                </a>
+            </li>
+            <li>
+                <a href="./speedruns.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        SPEEDRUNS
+                    </button></a>
+            </li>
+            <li>
+                <a href="./contact.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="requests"> <!--La idea aca es poder hacer una lista con temas recomendados-->
+        <p>Here you can request any song you'd like to hear recorded in piano version. Here is a list of current requests ordered by numbers of times requested 
+        so I can order my priorities.<br>
+        Just add them to the following playlist:</p> 
+        <!--De momento dejo una playlist de Spotify, lo que me encantaria poder hacer es agregar un widget, ya se de Spotify o no,
+        que permita buscar una cancion, que al hacer click en dicha cancion la agregue a una lista y que enumere la cantidad de veces que fue solicitada esa cancion. Como no lo
+        se hacer por ahora me limito a poner una playlist de Spotify-->
+        <section>
+            <div class="iframediv">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4pg2LgkzDFMdCcNsXpbswg?utm_source=generator&theme=0" 
+                width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+                </iframe>
+            </div>
+            <p>
+            This section will have a functional voting list once I learn JavaScript.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p class="wpptext">
+            <a>
+                +54 11 6800-1794
+            </a>
+        </p>
+        <div class="wppimage">
+            <img src="../images/whatsappicon.svg" alt="Icono de WhatsApp">
+        </div>
+        <div class="igimage">
+            <img src="../images/instagramIcon.png" alt="Icono de Instagram">
+        </div>
+        <p class="igtext">
+            <a href="https://www.instagram.com/nachomanfredini">
+                @nachomanfredini
+            </a>
+        </p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+crossorigin="anonymous"></script>
+</body>
+
+</html>

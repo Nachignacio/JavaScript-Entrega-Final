@@ -1,0 +1,70 @@
+/*Espaciado entre navegador y primer texto de Uploads*/
+.uploads {
+    margin-left: 20px;
+    p{
+        margin-top: 20px;
+        border-bottom: solid;
+        border-width: thin;
+        border-color: $colorBordeNav;
+    }
+    /*Espaciado entre video subido en Uploads y todo lo demas*/
+    .iframeuploads {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin: 20px;
+            font-size: x-large;
+            text-decoration: underline;
+        }
+        label{
+            img{
+    /*Tenia la intencion de usar la funcion visibility pero por alguna razon no funciona con la imagen
+    pero con opacity si puedo esconder la imagen*/
+                opacity: 1;
+                transition: 0.2s;
+        /*Codigo importado usando una pagina de box generator*/
+                box-shadow: 30px 30px 50px 1px rgba(0,0,0,0.64);
+                -webkit-box-shadow: 30px 30px 50px 1px rgba(0,0,0,0.64);
+                -moz-box-shadow: 30px 30px 50px 1px rgba(0,0,0,0.64);
+                /*Fin de codigo importado*/
+                cursor: pointer;
+                z-index: 0;
+                &:hover{
+                    transform: skew(5deg,1deg) scale(1.008);                    
+        /*Codigo importado usando una pagina de box generator*/
+                    box-shadow: 40px 40px 100px 15px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 40px 40px 100px 15px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 40px 40px 100px 15px rgba(0,0,0,0);
+                /*Fin de codigo importado*/
+                }
+            }
+            
+        }
+        .labelultimocapitulo{
+            height: 315px;
+            width: 560px;
+            img{
+                visibility: visible;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        iframe{
+            visibility: hidden;
+        }
+        #ultimocapitulo{
+            display: none;
+            &:checked~iframe{
+                visibility: visible;
+                position: absolute;
+    /*Ubicación para que se ponga justo donde antes estaba la imagen*/
+                top: 273px;
+            }
+            &:checked~.labelultimocapitulo{
+                opacity: 0;
+            }
+        }
+    }
+}

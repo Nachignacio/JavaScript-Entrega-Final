@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piano Bounty es un portal para solicitar versiones de las canciones que te gustan en piano con arreglos de música clásica.">
+    <meta name="keywords" content="piano, bounty, música, musica, clásica, clasica, cover, version, versión, comisión, comision, comisionado, Ignacio, ignacio, Manfredini, manfredini">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Piano Bounty | Speedruns</title>
+    <link rel="icon" type="image/x-icon" href="../images/pianofavicon.png">
+</head>
+<body>
+    <header> <!--Esto va a contener el logo de la pagina y el navegador-->
+        <h1> <!-- Creo el logo de la pagina -->
+            <p>Piano Bounty</p>
+        </h1>
+    </header>
+    <nav class="navbar navbar-dark bg-danger-subtle" id="navbarBurger"> <!--Empiezo a configurar el navegador de la pagina-->
+        <div class="container-fluid" id="navbar">
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" 
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-danger-subtle p-4">
+                <a href="./requests.html">
+                    <button class="navbutton">
+                        REQUESTS
+                    </button>
+                </a>
+                <a href="./uploads.html">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+                <a href="../index.html">
+                    <button class="navbutton"> 
+                        INTRODUCTION
+                    </button>
+                </a>
+                <a href="./speedruns.html">
+                    <button class="navbutton" id="actual">
+    <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        SPEEDRUNS
+                    </button>
+                </a>
+                <a href="./contact.html">
+                    <button class="navbutton">
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </div>
+        </div>
+        <ul class="navDesktop">
+            <li>
+                <a href="./requests.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        REQUESTS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="./uploads.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        INTRODUCTION
+                    </button>                        
+                </a>
+            </li>
+            <li>
+                <a href="./speedruns.html" class="hvr-underline-from-center" id="actual">
+                    <button class="navbutton"> <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        SPEEDRUNS
+                    </button></a>
+            </li>
+            <li>
+                <a href="./contact.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="speedruns"> <!--Empiezo con una descripcion de lo que se trata la seccion de Speedruns-->
+        <section>
+            <p>
+                In this section I'll be uploading a narrowed down version of my process of learning a song. I try to learn everything by ear while I also 
+                encourage the study of musical theory. That's why whenever somebody requests a song I don't know already I intend to record how much time will it take 
+                for me to learn it by ear, and that way compare myself as time goes by to see what I can improve:
+            </p>
+            <p id="noupload"> <!--Aca irian los videos subidos, SI TUVIERA ALGUNO. Asi que hasta entonces dejo un texto-->
+                There are no videos uploaded yet...
+            </p>
+            <div class="videoPlaceHolder" data-aos="fade-right" data-aos-duration="1000">
+                <p>
+                    This is where a video will be...
+                </p>
+            </div>
+            <div class="videoPlaceHolder" data-aos="fade-right" data-aos-duration="1000">
+                <p>
+                    This is where a video will be...
+                </p>
+            </div>
+            <div class="videoPlaceHolder"  data-aos="fade-right" data-aos-duration="1000">
+                <p>
+                    This is where a video will be...
+                </p>
+            </div>
+            <div class="videoPlaceHolder" data-aos="fade-right" data-aos-duration="1000">                
+                <p>
+                    This is where a video will be...
+                </p>
+            </div>
+            <div class="videoPlaceHolder" data-aos="fade-right" data-aos-duration="1000">
+                <p>
+                    This is where a video will be...
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="wpptext">
+            <a>
+                +54 11 6800-1794
+            </a>
+        </p>
+        <div class="wppimage">
+            <img src="../images/whatsappicon.svg" alt="Icono de WhatsApp">
+        </div>
+        <div class="igimage">
+            <img src="../images/instagramIcon.png" alt="Icono de Instagram">
+        </div>
+        <p class="igtext">
+            <a href="https://www.instagram.com/nachomanfredini">
+                @nachomanfredini
+            </a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../script/main.js"></script>
+</body>
+</html> 

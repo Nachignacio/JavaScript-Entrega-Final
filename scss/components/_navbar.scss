@@ -1,0 +1,214 @@
+#navbarBurger {
+    /*Para que el nav quede pegado al tope de la página cuando se 
+scrollea hacia abajo*/
+    position: sticky;
+    top: 0;
+    /*El z-index es para que al scrollear el nav quede siempre por 
+    encima de todo*/
+    z-index: 999;
+    /*Poner 100vw fue la única forma que encontré para que el body deje 
+    de quedar más chico que la página en distintas páginas*/
+    ul {
+        width: 100vw;
+        border: solid;
+        border-color: $colorBordeNav;
+        z-index: 999;
+        li {
+            a {
+
+                /*Formato de botones para que sea clickeable todo el boton del navegador y no solo 
+el texto del ancla, tambien se agrega animacion de hover*/
+                .navbutton {
+                    background-color: inherit; /*Para que el texto tenga el mismo color de fondo cuando sea el actual*/
+                    border: none;
+                    /*El borde ya esta dado por el parent list item*/
+                    font-family: Carena-Regular;
+                    color: $colorTextoNav;
+                    text-align: center;
+                    font-size: 16px;
+                    opacity: 0.6;
+                    /*transition: 2s;*/
+                    /*Comento esta linea de CSS porque me interesaba agregarle una animacion al boton luego de hacerle click, pero no se por que la animacion sucedia solo
+cuando hacia click en Uploads y Requests. Cuando se hacia click en Introduction, Contact y Speedruns no surgia animacion asi que lo comento para que no se aplique pero no
+termine de entender por que con algunos si y otros no animaba*/
+                    display: inline-block;
+                    width: 95%;
+                    /*Le pogno esto para que el boton ocupe todo el espacio del ancla, de esta forma la propiedad del hover (cambio de opacidad en la letra) se dispara cuando el mousse
+pase por encima de cualquier parte del boton, y no solo por encima del texto. Lo dejo en 95% porque con 100% supera al nav*/
+                    cursor: pointer;
+
+                    /*Con esta linea, el mousse cambia a una manito cuando pasa por encima del boton para indicar que se puede hacer click ahi*/
+                    &:hover {
+                        /*Con esta parte agrega la opacidad que quiero cuando pase el mouse por el boton*/
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Modifico dimensiones del navbar del tipo hamburguesa de como 
+viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
+funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
+.navbar {
+    padding: 0;
+    border: solid;
+    border-color: $colorBordeNav;
+    div {
+        .navbar-toggler {
+            /*Le doy borde al boton*/
+            border: solid;
+            border-color: $colorBordeNav;
+        }
+    }
+
+    /*Color del navbar*/
+    #navbar {
+        background-color: $colorNav;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+
+    /*Uso display:flex para ubiar los botones y que ocupen todo el vw*/
+    .navDesktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0%;
+        border: 0;
+        margin-bottom: 0;
+        li {
+            display: flex;
+            align-items: center;
+            text-justify: center;
+            /*Formato de los botones para el nav*/
+            border-style: none;
+            font-family: Carena-Regular;
+            background-color: $colorNav;
+            /*La idea del 20% es para que con el total de los 5 elementos del navegador se me 
+ocupe la totalidad del ancho de la pagina*/
+            width: 100%;
+            /*Quiero que el texto en los botones este con justificacion en el centro*/
+            text-align: center;
+            a {
+                padding-left: 50px; /*eSTE PADDING ES PARA CENTRAR LOS BOTONES*/
+                padding-right: 50px;
+                button {
+                    
+                    /*Modifico boton*/
+                    margin: 7px;
+                    
+                }
+            }
+        }
+    }
+}
+
+.collapse {
+    position: sticky; /*Para que se quede debajo del bar luego de desplegarse*/
+    top: 70px;
+    width: 100vw;
+    z-index: -1; /*Para que no me tape el boton al desplegar*/
+    .p-4 {
+        /*Solo poniendo !important me hace efecto este cambio*/
+        padding: 5px !important;
+    }
+    div {
+        a {
+            .navbutton {
+                background-color: $colorNav;
+                border: none;
+                font-family: Carena-Regular;
+                color: $colorTextoNav;
+                text-align: center;
+                font-size: 16px;
+                opacity: 0.6;
+                display: inline-block;
+                width: 95%;
+                cursor: pointer;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
+.collapsing {
+    position: sticky; /*Para que se quede debajo del bar luego de desplegarse*/
+    top: 70px;
+    width: 100vw;;
+    z-index: -1; /*Para que no me tape el boton al desplegar*/
+    .p-4 {
+        /*Solo poniendo !important me hace efecto este cambio*/
+        padding: 5px !important;
+    }
+
+    div {
+        a {
+            .navbutton {
+                background-color: $colorNav;
+                border: none;
+                font-family: Carena-Regular;
+                color: $colorTextoNav;
+                text-align: center;
+                font-size: 16px;
+                opacity: 0.6;
+                display: inline-block;
+                width: 95%;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Código importado desde el GitHub de Ian Lunn para agregar animaciones en botones*/
+
+/* Underline From Center */
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #7c3e25;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/*Termina código importado*/

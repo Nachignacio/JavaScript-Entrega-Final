@@ -1,0 +1,25 @@
+/*Espaciado entre navegador y primer texto en Requests*/
+.requests {
+    margin-left: 20px;
+    margin-top: 20px;
+    /*Espaciado entre texto y lista de solicitudes en Requests*/
+    section{
+        p {
+            margin-bottom: 25px;
+        }
+        .iframediv {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-items: center;
+            iframe {
+                width: 90%;
+                margin-left: -20px;
+            }
+        }
+        p{
+            margin-top: 20px;
+        }
+    }
+}

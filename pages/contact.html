@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piano Bounty es un portal para solicitar versiones de las canciones que te gustan en piano con arreglos de música clásica.">
+    <meta name="keywords" content="piano, bounty, música, musica, clásica, clasica, cover, version, versión, comisión, comision, comisionado, Ignacio, ignacio, Manfredini, manfredini">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Piano Bounty | Contact & More</title>
+    <link rel="icon" type="image/x-icon" href="../images/pianofavicon.png">
+</head>
+<body>
+    <header> <!--Esto va a contener el logo de la pagina y el navegador-->
+        <h1> <!-- Creo el logo de la pagina -->
+            <p>Piano Bounty</p>
+        </h1>
+    </header>
+    <nav class="navbar navbar-dark bg-danger-subtle" id="navbarBurger"> <!--Empiezo a configurar el navegador de la pagina-->
+        <div class="container-fluid" id="navbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+            <div class="bg-danger-subtle p-4">
+                <a href="./requests.html">
+                    <button class="navbutton">
+                        REQUESTS
+                    </button>
+                </a>
+                <a href="./uploads.html">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+                <a href="../index.html">
+                    <button class="navbutton">
+                        INTRODUCTION
+                    </button>
+                </a>
+                <a href="./speedruns.html">
+                    <button class="navbutton">
+                        SPEEDRUNS
+                    </button>
+                </a>
+                <a href="./contact.html">
+                    <button class="navbutton" id="actual">
+                <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </div>
+        </div>
+        <ul class="navDesktop">
+            <li>
+                <a href="../pages/requests.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        REQUESTS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="../pages/uploads.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        UPLOADS
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        INTRODUCTION
+                    </button>                        
+                </a>
+            </li>
+            <li>
+                <a href="../pages/speedruns.html" class="hvr-underline-from-center">
+                    <button class="navbutton">
+                        SPEEDRUNS
+                    </button></a>
+            </li>
+            <li>
+                <a href="../pages/contact.html" class="hvr-underline-from-center" id="actual">
+                    <button class="navbutton"> <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                        CONTACT & MORE
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="socialMedia"> <!--La idea es tener una seccion en la que me puedan contactar o pasar comentarios y feedback-->
+        <div> <!--Dejo mis redes sociales como una lista-->
+            <p>
+                Here are my social media links in case you would like to support me!:
+            </p>
+            <ul id="socialMediaList">
+                <li id="listIg">
+                    <a href="https://www.instagram.com/nachomanfredini">
+                        <img src="../images/instagramIcon.png" alt="Icono de WhatsApp">
+                        Instagram</a> 
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCc0LZoM_uTapCsT-FZoqgFQ">
+                        <img src="../images/youtubeIcon.png" alt="Icono de Instagram">
+                        YouTube</a>
+                </li>
+            </ul>
+        </div>
+        <section class="sectionForm">
+            <form id="formulario">
+                <div> <!--Texto para introducir lo que sera el formulario para mandarme feedback-->
+                    <p>
+                        Feel free to send me your opinion about my uploads, performance, compositions, thoughts about this website, new projects, etc. 
+                        Any feedback is welcomed:
+                    </p>
+                </div>
+                <div> <!-- Agrego celdas de texto opcionales para incluir en el mensaje-->
+                    <h4>
+                        <label>Name:</label>
+                    </h4>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div>
+                    <h4>
+                        <label for="email">E-mail:</label><!-- Celda para agregar el mail de remitente, tambien opcional-->
+                    </h4>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+                <div>
+                    <textarea cols="30" rows="10" placeholder="Write a message..." id="comentario"></textarea> <!--Zona de texto para escribir el mensaje-->
+                </div>
+                <div id="botones">
+                    <input type="submit" value="Agregar"> <!-- Dejo botones para enviar el mensaje o resetearlo-->
+                    <input type="reset">
+                </div>
+            </form>
+        </section>
+        <section class="comentarios">
+            <h2>Comments</h2>
+            <ul class="listaComentarios">
+            </ul>
+            <!--
+            <p>
+                Here are some very talented channels and artists I follow as inspiration. You may be interested in hearing them out too:
+            </p>-->
+        </section>
+        <section class="recommendedTopRight">
+<!-- Sección de videos de cuenta de YouTube Animenz-->
+            <h2>
+                Animenz
+            </h2>
+            <div id="animenzVideo">
+                <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUyW-leqPXUunrXXxFjpZ7VA">
+                </iframe>
+            </div>
+            <h3>
+                Other videos:
+            </h3>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUyW-leqPXUunrXXxFjpZ7VA&index=2"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUyW-leqPXUunrXXxFjpZ7VA&index=3"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUyW-leqPXUunrXXxFjpZ7VA&index=5"></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="recommendedBottom1">
+<!-- Sección de videos de cuenta de YouTube Player Piano-->
+            <h2>
+                Player Piano
+            </h2>
+            <div id="playerPianoVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Yt20uO4cFYs?si=0OtWsrsTKFHaVQ-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>
+                Other videos:
+            </h3>
+            <div id="carouselExample2Autoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0CBJDtsjjZ8?si=lS4RN2zsN_XcvtFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lID0A5p0_SY?si=OihMe8Jm7joAU-EI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LKNAFKEavSM?si=h2HoYl5eySTUZKHZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2Autoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2Autoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- <section class="recommendedBottom2"> -->
+ <!-- Sección de videos de cuenta de YouTube Daniel Thrasher -->
+ <!--
+            <h2>
+                Daniel Thrasher
+            </h2>
+            <div id="danielThrasherVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KSlGJv3LZII?si=E-7BoM3A5ktJLjLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>
+                Other videos:
+            </h3>
+            <div id="carouselExample3Autoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eyKohdpWE5Y?si=Msx3AYaKGiQv2AUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/L6rK3e7mwcI?si=IgJGaC737R-t7bqa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yQGeXnDFQWk?si=qtMsYLZ6mBTdTKQe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3Autoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3Autoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    -->
+        <section class="recommendedBottom3">
+<!-- Sección de videos de cuenta de YouTube Mr Piano Minion -->
+            <h2>
+                MrPianoMinion
+            </h2>
+            <div id="mrPianoMinionVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuaIw3v1D8?si=hmTuFQhfnkNxEmwe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>
+                Other videos:
+            </h3>
+            <div id="carouselExample4Autoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CZtT_SFWEsw?si=ca1TQtCH6CPpHyIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4AoIue2U2UY?si=l4eCaNcNa212rA_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-qjNd_WiKgg?si=8Upe7BxftUYJAbV6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4Autoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4Autoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="recommendedBottom4">
+<!-- Sección de videos de cuenta de YouTube Jaime Altozano -->
+            <h2>
+                Jaime Altozano
+            </h2>
+            <div id="jaimeAltozanoVideo">
+                <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUdZbCqHoPAT5hBuu3y3Qkhw">
+                </iframe>
+            </div>
+            <h3>
+                Other videos:
+            </h3>
+            <div id="carouselExample5Autoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUdZbCqHoPAT5hBuu3y3Qkhw&index=2"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUdZbCqHoPAT5hBuu3y3Qkhw&index=3"></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUdZbCqHoPAT5hBuu3y3Qkhw&index=4"></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5Autoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5Autoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="wpptext">
+            <a>
+                +54 11 6800-1794
+            </a>
+        </p>
+        <div class="wppimage">
+            <img src="../images/whatsappicon.svg" alt="Icono de WhatsApp">
+        </div>
+        <div class="igimage">
+            <img src="../images/instagramIcon.png" alt="Icono de Instagram">
+        </div>
+        <p class="igtext">
+            <a href="https://www.instagram.com/nachomanfredini">
+                @nachomanfredini
+            </a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+crossorigin="anonymous"></script>
+    <script src="../script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@each $s, $v in $social{
+    .#{$s}image{
+        @include footerin($tamanioFooter, 50vw, #{$v});
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+/*Este loop es para automatizar el estilo de las areas de artistas recomendados en Contact*/
+.socialMedia{
+    @each $gridPosition, $channel in $artistsGrid{
+        .#{$gridPosition}{
+            border-top: dotted;
+            grid-area: #{$gridPosition};
+            margin-top: 0px;
+            padding: 0px 20px 20px 0px;
+            border-left: dotted;
+            p{
+                margin-bottom: 50px;
+                text-align: justify;
+            }
+            h2{
+                margin-top: 20px;
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 20px;
+            }
+            ##{$channel}{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                padding-bottom: 56.25%;
+                height: auto;
+                width: auto;
+                iframe{
+                    justify-self: center;
+                    position: absolute;
+                    height: 80%;
+                    width: 80%;
+                }
+            }
+            h3{
+                margin-top: 30px;
+                position: relative;
+                text-decoration: underline;
+                margin-bottom: 35px;
+                text-align: center;
+            }
+            .carousel{
+                height: 50%;
+                margin: 10%;
+                margin-bottom: 0;
+                height: 80%;
+                width: 80%;
+                z-index: 0; /*Para evitar que las flechas se solapen con el footer*/
+                button{
+                    height: 35%;
+                }
+                .carousel-control-next{
+                    right: -12%;
+                }
+                .carousel-control-prev{
+                    left: -12%;
+                }
+                .carousel-inner{
+                    .carousel-item{
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        iframe{
+                            position: absolute;
+                            top: 0;
+                            left:0;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

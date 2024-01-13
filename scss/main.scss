@@ -1,0 +1,19 @@
+//asi se comenta en sass
+/*se importan los partials*/
+//importo los scss partials
+
+@import "./utilities/variables";
+@import "./utilities/global";
+@import "./utilities/keyframes";
+@import "./utilities/mixins";
+@import "./utilities/maps";
+@import "./utilities/loops";
+@import "./components/navbar";
+@import "./components/body";
+@import "./pages/index";
+@import "./pages/contact";
+@import "./pages/requests";
+@import "./pages/speedruns";
+@import "./pages/uploads";
+@import "./utilities/mediaqueries";
+@import "./components/footer";

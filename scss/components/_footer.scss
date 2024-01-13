@@ -1,0 +1,33 @@
+footer{
+    /*display: flex;
+    flex-direction: row;
+    text-align: center;*/
+    position: fixed;
+    background-color: $colorFooter;
+    z-index: 20;
+    /*height: $tamaniofooter;*/
+    bottom: 0;
+    width: 100vw;
+    padding: $paddingFooter 0 $paddingFooter 0;
+    height: $tamanioFooter+2*$paddingFooter;
+    z-index: 9;
+    /*Hice el mixin footerin para que centre dentro del footer*/
+    
+    
+    /*Hice el mixin footerintexto para que centre dentro del footer*/
+        .wpptext{
+            @include footerintexto($tamanioTextoFooter, 50vw, -$espaciadoTextoFooter);
+            font-weight: bold;
+        }
+        .igtext{
+            
+            @include footerintexto($tamanioTextoFooter, 50vw, 0.75*$espaciadoTextoFooter);
+            a{
+                position: absolute;
+                top: -5px;
+                color: $colorTextoFooter;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+    }
