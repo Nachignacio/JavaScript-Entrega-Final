@@ -30,13 +30,32 @@
         }
         #searchBox{
             display: none;
-            border-color: black;
-            border-width: thick;
-            background-color: $colorFooter;
+            border-style: none;
+            border-color:  rgb(32, 13, 13);
+            border-width: 5px;
+            border-radius: 15px;
             width: 300px;
-            height: 300px;
+            height: auto;
             #recommendationsList{
                 color: white;
+                margin: 0;
+                padding-left: 0;
+                li{
+                    background-image: linear-gradient(rgba(100, 20, 17, 0.555), $colorFooter);
+                    list-style-type: none;
+                    position: relative;
+                    padding: 10px 10px 10px 10px;
+                    cursor: pointer;
+                }
+                li:hover{
+                    background-color: red;
+                }
+                #firstItemRecommended{
+                    border-radius: 10px 10px 0px 0px;
+                }
+                #lastItemRecommended{
+                    border-radius: 0px 0px 10px 10px;
+                }
             }
         }
     }

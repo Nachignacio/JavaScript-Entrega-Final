@@ -29,28 +29,40 @@ const token = localStorage.getItem('token');
 
 let input = document.querySelector('#search');
 let button = document.querySelector('#searchButton');
+let list = document.querySelector("#recommendationsList");
+let searchBox = document.querySelector('#searchBox');
 let searchValue = '';
 
 button.addEventListener('click', (event, searchValue) => {
     event.preventDefault();
-    let searchBox = document.querySelector('#searchBox');
-    
-    //searchBox.style.display='display';
+    searchBox.style.borderStyle = "solid";
     searchValue = document.querySelector('#search').value;
-    console.log(searchValue);
     let trackPromise = getData(searchValue,token);
-    let list = document.querySelector("#recommendationsList");
     trackPromise.then(trackObject => {
         for (let i = 0; i < 10; ++i) {
             
             let songNumberString = 'Song' + i.toString();
-            let artistsNames = trackObject.tracks.items[i].artists.map(artist => artist.name).join(', ');
 
+            /*Este try and catch es necesario para que no se me trabe el searchBox cuando no encuentre un artista*/
+            try{
+            let artistsNames = trackObject.tracks.items[i].artists.map(artist => artist.name).join(', ');
             localStorage.setItem(songNumberString, trackObject.tracks.items[i].name + " - " + artistsNames);
+            }
+            catch(error){
+                console.log("There was an error" + error);
+            }
+
+            
 
             let listItem = document.createElement('li');
             listItem.innerHTML=localStorage.getItem(songNumberString);
-
+            console.log(i);
+            if(i==0){
+                listItem.setAttribute("id", "firstItemRecommended");
+            }
+            if(i==9){
+                listItem.setAttribute("id", "lastItemRecommended");
+            }
             console.log(songNumberString);
             console.log(listItem);
             list.appendChild(listItem);
@@ -58,28 +70,13 @@ button.addEventListener('click', (event, searchValue) => {
     });
 })
 
-input.addEventListener('input', ( ) => {
-    if(input.value!="")
+input.addEventListener('keydown', (event) => {
+    if (list.innerHTML!="")
+        list.innerHTML="";
+    if (input.value !="")
         searchBox.style.display = "block";
-    else
+    else{
         searchBox.style.display = "none";
+    }
+    searchBox.style.borderStyle = "none";    
 });
-
-
-
-
-
-/*getData().then(trackData => console.log(trackData)).then(song => localStorage.setItem('songs',JSON.stringify(song)));
-let songs=JSON.parse(localStorage.getItem('songs'));
-console.log(songs);*/
-
-
-/*Comienzo el motor de busqueda de Spotify*/
-
-
-
-/*Agrego el evento de guardar el valor buscado al pulsar el boton Search*/
-
-
-
-
