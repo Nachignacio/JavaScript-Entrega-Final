@@ -31,44 +31,56 @@ let input = document.querySelector('#search');
 let button = document.querySelector('#searchButton');
 let list = document.querySelector("#recommendationsList");
 let searchBox = document.querySelector('#searchBox');
+let ulVoted = document.querySelector('#listWithVotes');
 let searchValue = '';
 
 button.addEventListener('click', (event, searchValue) => {
     event.preventDefault();
     searchBox.style.borderStyle = "solid";
     searchValue = document.querySelector('#search').value;
-    let trackPromise = getData(searchValue,token);
+    let trackPromise = getData(searchValue, token);
     trackPromise.then(trackObject => {
         for (let i = 0; i < 10; ++i) {
-            
             let songNumberString = 'Song' + i.toString();
 
-            /*Este try and catch es necesario para que no se me trabe el searchBox cuando no encuentre un artista*/
-            try{
-            let artistsNames = trackObject.tracks.items[i].artists.map(artist => artist.name).join(', ');
-            localStorage.setItem(songNumberString, trackObject.tracks.items[i].name + " - " + artistsNames);
+            try {
+                let artistsNames = trackObject.tracks.items[i].artists.map(artist => artist.name).join(', ');
+                localStorage.setItem(songNumberString, trackObject.tracks.items[i].name + " - " + artistsNames);
+            } catch (error) {
+                console.log("There was an error", error);
             }
-            catch(error){
-                console.log("There was an error" + error);
-            }
-
-            
 
             let listItem = document.createElement('li');
-            listItem.innerHTML=localStorage.getItem(songNumberString);
+            let listAnchor = document.createElement('a');
+
+            listItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log('li clicked');
+                let liVoted = document.createElement('li');
+                liVoted.textContent = event.target.textContent;
+                ulVoted.appendChild(liVoted);
+            });
+
+            let content = document.createTextNode(localStorage.getItem(songNumberString));
+            listAnchor.textContent = content.textContent;
+            listItem.appendChild(listAnchor);
+
             console.log(i);
-            if(i==0){
+            if (i == 0) {
                 listItem.setAttribute("id", "firstItemRecommended");
             }
-            if(i==9){
+            if (i == 9) {
                 listItem.setAttribute("id", "lastItemRecommended");
             }
+
             console.log(songNumberString);
             console.log(listItem);
             list.appendChild(listItem);
         }
     });
 })
+
+
 
 input.addEventListener('keydown', (event) => {
     if (list.innerHTML!="")
