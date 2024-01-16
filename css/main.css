@@ -864,6 +864,22 @@ body h1 p {
 .requests section p {
   margin-top: 20px;
 }
+.requests form button {
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+}
+.requests form #searchBox {
+  display: none;
+  border-color: black;
+  border-width: thick;
+  background-color: rgb(71, 29, 29);
+  width: 300px;
+  height: 300px;
+}
+.requests form #searchBox #recommendationsList {
+  color: white;
+}
 
 .speedruns {
   /*Espaciado entre navegador y primer texto en Speedruns*/
