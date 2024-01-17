@@ -590,7 +590,8 @@ nav .navDesktop li a button {
 body {
   background-image: linear-gradient(#b48a99, rgba(92, 69, 69, 0.8784313725));
   background-repeat: no-repeat;
-  padding-bottom: 0;
+  height: auto;
+  padding-bottom: 950px;
   /*Es necesario agregar este estilo para que el gradiente se me extienda por toda la página*/
   background-attachment: fixed;
 }
@@ -901,19 +902,23 @@ body h1 p {
 }
 .requests form #listWithVotes {
   position: absolute;
-  display: flex;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
   justify-content: center;
   flex-direction: column;
   top: 300px;
   left: 50vw;
-  transform: translateX(-150px);
+  transform: translateX(-300px);
+}
+.requests form #listWithVotes .votesCount {
+  width: 50px;
 }
 .requests form #listWithVotes li {
   background-image: linear-gradient(rgba(128, 16, 12, 0.555), rgb(71, 29, 29));
   display: flex;
   position: relative;
   height: auto;
-  width: 300px;
+  width: 600px;
   background-color: rgb(71, 29, 29);
   list-style-type: none;
   color: white;
@@ -1182,13 +1187,9 @@ body h1 p {
   }
 }
 footer {
-  /*display: flex;
-  flex-direction: row;
-  text-align: center;*/
   position: fixed;
   background-color: rgb(71, 29, 29);
   z-index: 20;
-  /*height: $tamaniofooter;*/
   bottom: 0;
   width: 100vw;
   padding: 20px 0 20px 0;

@@ -3,7 +3,8 @@
 body {
     background-image: $fondoPagina;
     background-repeat: no-repeat;
-    padding-bottom: 0;
+    height: auto;
+    padding-bottom: 950px;
 /*Es necesario agregar este estilo para que el gradiente se me extienda por toda la página*/
     background-attachment: fixed;
     h1 {

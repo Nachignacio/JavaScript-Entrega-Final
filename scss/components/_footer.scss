@@ -1,11 +1,7 @@
 footer{
-    /*display: flex;
-    flex-direction: row;
-    text-align: center;*/
     position: fixed;
     background-color: $colorFooter;
     z-index: 20;
-    /*height: $tamaniofooter;*/
     bottom: 0;
     width: 100vw;
     padding: $paddingFooter 0 $paddingFooter 0;
