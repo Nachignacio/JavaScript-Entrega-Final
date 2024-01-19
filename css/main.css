@@ -591,7 +591,8 @@ body {
   background-image: linear-gradient(#b48a99, rgba(92, 69, 69, 0.8784313725));
   background-repeat: no-repeat;
   height: auto;
-  padding-bottom: 950px;
+  padding-bottom: 900px;
+  overflow: auto;
   /*Es necesario agregar este estilo para que el gradiente se me extienda por toda la página*/
   background-attachment: fixed;
 }
@@ -866,11 +867,12 @@ body h1 p {
   margin-top: 20px;
 }
 .requests form button {
-  width: 50px;
-  height: 25px;
+  width: 80px;
+  padding: 2px;
   border-radius: 5px;
 }
 .requests form #searchBox {
+  margin-top: 20px;
   display: none;
   border-style: none;
   border-color: rgb(32, 13, 13);
@@ -903,7 +905,7 @@ body h1 p {
 .requests form #listWithVotes {
   position: absolute;
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   flex-direction: column;
   top: 300px;
@@ -911,7 +913,13 @@ body h1 p {
   transform: translateX(-300px);
 }
 .requests form #listWithVotes .votesCount {
-  width: 50px;
+  width: 75px;
+}
+.requests form #listWithVotes #liVotesHeader {
+  border-radius: 0px 20px 0px 0px;
+}
+.requests form #listWithVotes #listItemHeader {
+  border-radius: 20px 0px 0px 0px;
 }
 .requests form #listWithVotes li {
   background-image: linear-gradient(rgba(128, 16, 12, 0.555), rgb(71, 29, 29));
@@ -926,6 +934,9 @@ body h1 p {
   border-style: solid;
   border-color: black;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 10 10px 10px;
+  -webkit-box-shadow: 25px 5px 25px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 100px 10px 24px 0px rgba(0, 0, 0, 0.75);
 }
 
 .speedruns {
